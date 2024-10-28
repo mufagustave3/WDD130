@@ -152,14 +152,16 @@
 } 
 .yellow5 {
   width: 100%; 
-  height: 100px; 
+  height: 200px; 
   background-color: gold; 
+  margin-top: -100px;
 
 } 
 .blue5 {
   width: 100%; 
   height: 100px; 
   background-color: blue; 
+  margin-bottom: 300px;
 } 
 /* Activity 6 styles */ 
 .content6 {

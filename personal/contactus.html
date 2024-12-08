@@ -3,52 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paintings</title>
+    <title>Contact - Art by Gustave Mufa</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url('imgg.jpg');
+        }
+        
+        header {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #f4f4f4;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        section {
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        #contact {
+            padding: 40px 20px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form textarea {
+            padding-bottom: 50px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #2a2a2a;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #333;
+        }
+
+        #formMessage {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+        }
+        
+        footer p {
+            font-size: 1rem;
+        }
+        h1 a {
+            color: white;
+            text-decoration: none;
+            /*font-size: 1.2rem;
+            font-weight: 500;*/
+        }
+    </style>
 </head>
 <body>
-    <div id="content">
-        <header>
-            <a id="logo__link" href="index.html">
-                <img class= "logo" src="logo.jpeg" alt="shark logo">
-            </a>
-                
+
+    <header>
+        <div class="container nav-container">
+            <h1>
+                <a href="index.html">Art by Didier Mufa</a>
+            </h1>
+            
             <nav>
-                <a href="index.html">Home</a>
-                <a href="https://mufagustave3.github.io/WDD130/personal/gallery.html">Gallery</a>
-                <a href="https://mufagustave3.github.io/WDD130/personal/contactus.html">Contact Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact us</a>
+                <a href="about.html">About</a>
             </nav>
-        </header>
-        <div id="hero">
-             
         </div>
-        <main class="home-grid">
-            <img src="image8.jpg" alt="">
-            <h1>Contact Us</h1>
-            <input type="text">
-            <input type="text">
-            <button>send</button>
+    </header>
+
+    <!-- Contact Section -->
+     <br><br><br><br>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you're interested in purchasing any artwork or want to learn more, feel free to reach out to Didier Mufa.</p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage" class="hidden">Thank you for your message!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Art by Didier Mufa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Display thank you message
+            document.getElementById('formMessage').classList.remove('hidden');
             
-        </main>
-        <footer>
-            <p>Paintings &copy; 2024 - Gustave Mufa</p>
-            <p><a href="https://mufagustave3.github.io/WDD130/painting/site-plan.html">Site Plan</a></p>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="https://mufagustave3.github.io/WDD130/personal/gallery.html">Gallery</a></p>
-            <p><a href="https://mufagustave3.github.io/WDD130/personal/contactus.html">Contact Us</a></p>
-            
-            <div class="Social">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="facebook.png" alt="fb icon">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="twitter.png" alt="twitter icon">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="instagram.png" alt="instagram icon">
-                </a>
-    
-            </div>
-        </footer>
-    </div>
+            // Reset the form fields
+            document.getElementById('contactForm').reset();
+        });
+    </script>
 </body>
 </html>

@@ -16,7 +16,31 @@
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            background-image: url('imgg.jpg');
+            background-image: url('image13.jpg');
+
+            position: relative;
+            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Optional: Makes the background stay fixed while scrolling */
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Create a blurred overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('image12.jpg'); /* Same background image */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); /* Adjust the blur level as needed */
+            z-index: -1; /* Position it behind the content */
+            opacity: 0.5; /* Optional: Makes the blur less intense */
         }
         
         header {
@@ -130,6 +154,9 @@
             text-decoration: none;
             /*font-size: 1.2rem;
             font-weight: 500;*/
+        }
+        #contact {
+            color: rgb(206, 195, 195);
         }
     </style>
 </head>

@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Art by Gustave Mufa</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url('image12.jpg');
+        }
+        
+        header {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #f4f4f4;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        section {
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
 
+        #about {
+            padding: 40px 20px;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+        }
+        
+        footer p {
+            font-size: 1rem;
+        }
+        h1 a {
+            color: white;
+            text-decoration: none;
+            /*font-size: 1.2rem;/
+            font-weight: 500;*/
+        }
+        #about p {
+            color: rgb(253, 251, 251);
+            background-color: rgb(107, 109, 109);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <h1>
+                <a href="index.html">Art by Gustave Mufa</a>
+            </h1>
+            
+            <nav>
+                <a href="gallery.html">Gallery</a>
+                <a href="contactus.html">Contact us</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <br><br><br>
+            <h2>About the Artist</h2>
+            <p>Gustave Mufa is an accomplished artist known for his vibrant paintings that evoke emotion and wonder. His work explores the beauty of nature, human connection, and the complexities of life. Through his art, he invites you to experience the world from a new perspective.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Art by Gustave Mufa. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

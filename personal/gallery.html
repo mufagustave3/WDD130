@@ -3,55 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paintings</title>
+    <title>Gallery - Art by Didier Mufa</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding-bottom: 80px; /* To prevent the footer from overlapping content */
+        }
+        
+        header {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #f4f4f4;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        section {
+            padding: 40px 20px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        
+        #gallery {
+            padding: 40px 20px;
+        }
+        
+        #gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .gallery-item p {
+            padding: 10px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+        }
+        
+        footer p {
+            font-size: 1rem;
+        }
+        
+        body {
+            background-image: url(image12.jpg);
+        }
+        h1 a {
+            color: rgb(252, 249, 249);
+            text-decoration: none;
+            /*font-size: 1.2rem;/
+            font-weight: 500;*/
+        }
+        section div p {
+            color: black;
+        }
+        
+    </style>
 </head>
 <body>
-    <div id="content">
-        <header>
-            <a id="logo__link" href="index.html">
-                <img class= "logo" src="logo.jpeg" alt="shark logo">
-            </a>
-                
+
+    <header>
+        <div class="container nav-container">
+            <h1>
+                <a href="index.html">Art by Gustave Mufa</a>
+            </h1>
+            
             <nav>
-                <a href="index.html">Home</a>
-                <a href="https://mufagustave3.github.io/WDD130/personal/gallery.html">Gallery</a>
-                <a href="https://mufagustave3.github.io/WDD130/personal/contactus.html">Contact Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contactus.html">Contact us</a>
+                <a href="about.html">About</a>
             </nav>
-        </header>
-        <div id="hero">
-             
         </div>
-        <main class="home-grid">
-            <h1>Gallery</h1>
-            <p>Before exploring the gallery of pictures, take a moment to reflect on the themes and emotions that might emerge from the visuals. Each image has its own story to tell, capturing moments, ideas, or concepts that evoke feelings, provoke thoughts, or inspire creativity. As you browse through the collection, consider how the images resonate with your own experiences or perspectives. Let your imagination guide you as you journey through this visual experience, connecting with the artistry and narratives each picture presents.</p>
-            <img src="image4.jpg" alt="">
-            <img src="image5.webp" alt="">
-            <img src="image7.jpg" alt="">
-            <img src="image8.jpg" alt="">
-            <button>See more</button>
-            
-            
-        </main>
-        <footer>
-            <p>Paintings &copy; 2024 - Gustave Mufa</p>
-            <p><a href="https://mufagustave3.github.io/WDD130/painting/site-plan.html">Site Plan</a></p>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="https://mufagustave3.github.io/WDD130/personal/gallery.html">Gallery</a></p>
-            <p><a href="https://mufagustave3.github.io/WDD130/personal/contactus.html">Contact Us</a></p>
-            
-            <div class="Social">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="facebook.png" alt="fb icon">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="twitter.png" alt="twitter icon">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="instagram.png" alt="instagram icon">
-                </a>
-    
+    </header>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="image11.jpg" alt="Painting 1">
+                    <p>Painting 1</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image12.jpg" alt="Painting 2">
+                    <p>Painting 2</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image3.jpg" alt="Painting 3">
+                    <p>Painting 3</Picture></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image4.jpg" alt="Painting 3">
+                    <p>Painting 4</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image9.jpg" alt="Painting 3">
+                    <p>Painting 5</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image10.jpg" alt="Painting 3">
+                    <p>Painting 6</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image7.jpg" alt="Painting 3">
+                    <p>Painting 7</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image13.jpg" alt="Painting 3">
+                    <p>Painting 8</p>
+                </div>
+                <!-- Add more gallery items as needed -->
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Art by Gustave Mufa. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
